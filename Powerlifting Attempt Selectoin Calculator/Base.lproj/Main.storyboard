@@ -710,7 +710,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="abF-Qg-PYh">
-                                        <rect key="frame" x="20" y="8" width="122.33333333333333" height="104"/>
+                                        <rect key="frame" x="19.999999999999993" y="8" width="122.33333333333333" height="104"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL &amp; WILKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uj9-0F-tIy">
                                                 <rect key="frame" x="0.0" y="0.0" width="122.33333333333333" height="20.333333333333332"/>

@@ -77,7 +77,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnCalculate(_ sender: Any) {
-        
+        print("calculate")
+
         print("calculate")
     }
     
