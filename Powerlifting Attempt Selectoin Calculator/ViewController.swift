@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         self.lblCalculate.layer.cornerRadius = 10
         self.hideKeyboardWhenTappedAround()
         
-            // shift keyboard upword on textviw starts
+        // shift keyboard upword on textviw starts
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         }
