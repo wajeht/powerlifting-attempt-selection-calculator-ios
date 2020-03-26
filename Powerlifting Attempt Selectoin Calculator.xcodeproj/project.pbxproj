@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E043668B242D2CAF0078AE5D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043668A242D2CAF0078AE5D /* ResultViewController.swift */; };
 		E0631304242C679500812792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0631303242C679500812792 /* AppDelegate.swift */; };
 		E0631306242C679500812792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0631305242C679500812792 /* SceneDelegate.swift */; };
 		E0631308242C679500812792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0631307242C679500812792 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E043668A242D2CAF0078AE5D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E0631300242C679500812792 /* Powerlifting Attempt Selectoin Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Powerlifting Attempt Selectoin Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0631303242C679500812792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0631305242C679500812792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				E0631303242C679500812792 /* AppDelegate.swift */,
 				E0631305242C679500812792 /* SceneDelegate.swift */,
 				E0631307242C679500812792 /* ViewController.swift */,
+				E043668A242D2CAF0078AE5D /* ResultViewController.swift */,
 				E0631309242C679500812792 /* Main.storyboard */,
 				E063130C242C679600812792 /* Assets.xcassets */,
 				E063130E242C679600812792 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				E0631308242C679500812792 /* ViewController.swift in Sources */,
 				E0631304242C679500812792 /* AppDelegate.swift in Sources */,
 				E0631306242C679500812792 /* SceneDelegate.swift in Sources */,
+				E043668B242D2CAF0078AE5D /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jawstrength.Powerlifting-Attempt-Selectoin-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jawstrength.Powerlifting-Attempt-Selectoin-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
