@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/wajeht/powerlifting_attempt_selection_calculator/blob/584053c3b275bbad3a521af2886264961fd1c9ea/app/src/main/res/drawable/screenshot.png"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/wajeht/ios_powerlifting_meet_attempt_selection_calculator/master/screenshot.png"></p>
 
 # Powerlifting: Meet Attempt Selection Calculator
 This app was developed by using coach Matt Gary guidance on which percentages where best to attempt at a powerlifting meet. There is no attempt selection calculator on both android and iOS AppStore. So I decided to wrote this as a side project.
