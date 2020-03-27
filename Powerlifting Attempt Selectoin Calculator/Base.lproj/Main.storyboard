@@ -76,22 +76,22 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-gA-Bm1">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-gA-Bm1">
                                                                 <rect key="frame" x="126.33333333333334" y="0.0" width="121.33333333333334" height="32.666666666666664"/>
                                                                 <state key="normal" title="Male">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="btnMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ra-Tz-5HC"/>
+                                                                    <action selector="btnMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RNC-9H-uIJ"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-w5-BII">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-w5-BII">
                                                                 <rect key="frame" x="252.66666666666671" y="0.0" width="121.33333333333334" height="32.666666666666664"/>
                                                                 <state key="normal" title="Female">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="btnFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgS-0i-fsX"/>
+                                                                    <action selector="btnFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCg-kg-doG"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
