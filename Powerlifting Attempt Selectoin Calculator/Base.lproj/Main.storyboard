@@ -24,11 +24,21 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="rOW-B7-YbG">
                                                 <rect key="frame" x="8" y="66" width="398" height="220"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulc-YU-gQC">
+                                                <rect key="frame" x="8" y="66" width="398" height="158"/>
+                                                <connections>
+                                                    <action selector="aboutAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfH-X8-GeL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ulc-YU-gQC" secondAttribute="bottom" id="6Ea-UL-Xy6"/>
                                             <constraint firstAttribute="trailing" secondItem="rOW-B7-YbG" secondAttribute="trailing" constant="8" id="QHh-Mu-3fl"/>
                                             <constraint firstAttribute="bottom" secondItem="rOW-B7-YbG" secondAttribute="bottom" constant="-62" id="SWD-WV-Ebz"/>
+                                            <constraint firstItem="Ulc-YU-gQC" firstAttribute="top" secondItem="Emq-SQ-CSZ" secondAttribute="top" constant="66" id="UQ1-MC-Cew"/>
                                             <constraint firstItem="rOW-B7-YbG" firstAttribute="centerY" secondItem="Emq-SQ-CSZ" secondAttribute="centerY" constant="64" id="XPZ-wM-Ur8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ulc-YU-gQC" secondAttribute="trailing" constant="8" id="aQT-bN-p9N"/>
+                                            <constraint firstItem="Ulc-YU-gQC" firstAttribute="leading" secondItem="Emq-SQ-CSZ" secondAttribute="leading" constant="8" id="d51-0v-4kV"/>
                                             <constraint firstItem="rOW-B7-YbG" firstAttribute="centerX" secondItem="Emq-SQ-CSZ" secondAttribute="centerX" id="icQ-5M-RLy"/>
                                             <constraint firstItem="rOW-B7-YbG" firstAttribute="leading" secondItem="Emq-SQ-CSZ" secondAttribute="leading" constant="8" id="kLQ-iv-Qk3"/>
                                             <constraint firstItem="rOW-B7-YbG" firstAttribute="top" secondItem="Emq-SQ-CSZ" secondAttribute="top" constant="66" id="xDR-T2-huV"/>
@@ -76,24 +86,51 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-gA-Bm1">
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-eO-dge">
                                                                 <rect key="frame" x="126.33333333333334" y="0.0" width="121.33333333333334" height="32.666666666666664"/>
-                                                                <state key="normal" title="Male">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="btnMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RNC-9H-uIJ"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-w5-BII">
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-gA-Bm1">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="32.666666666666664"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <state key="normal" title="Male" image="uncheck">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checked">
+                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="btnMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RNC-9H-uIJ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPg-4T-bcX">
+                                                                        <rect key="frame" x="40.333333333333314" y="0.0" width="81" height="32.666666666666664"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O17-XI-iZ9">
                                                                 <rect key="frame" x="252.66666666666671" y="0.0" width="121.33333333333334" height="32.666666666666664"/>
-                                                                <state key="normal" title="Female">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="btnFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCg-kg-doG"/>
-                                                                </connections>
-                                                            </button>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-w5-BII">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="32.666666666666664"/>
+                                                                        <state key="normal" title="Female" image="uncheck">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <state key="selected" image="checked"/>
+                                                                        <connections>
+                                                                            <action selector="btnFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCg-kg-doG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syq-fc-ZnO">
+                                                                        <rect key="frame" x="39.333333333333314" y="0.0" width="82" height="32.666666666666664"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wWe-Ja-yza">
@@ -260,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="137"/>
+            <point key="canvasLocation" x="140.57971014492756" y="136.60714285714286"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4f9-Lu-fbQ">
@@ -882,5 +919,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="banner" width="1635" height="441"/>
+        <image name="checked" width="610" height="604"/>
+        <image name="uncheck" width="607" height="596"/>
     </resources>
 </document>

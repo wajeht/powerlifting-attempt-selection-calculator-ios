@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblFemale: UIButton!
     @IBOutlet weak var lblCalculate: UIButton!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCalculate.layer.cornerRadius = 10
@@ -38,6 +40,16 @@ class ViewController: UIViewController {
         }
     }
     // shift keyboard upword on textviw ends
+    
+    
+    
+    @IBAction func aboutAlert(_ sender: Any) {
+        let alert = UIAlertController(title: "", message: "This app is free forever, but it still cost effort to maintain it on AppStore. Want to buy a cup of coffee?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in }))
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
      
     @IBAction func btnMale(_ sender: Any) {
         
