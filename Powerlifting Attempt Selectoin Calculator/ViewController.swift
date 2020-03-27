@@ -14,6 +14,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblFemale: UIButton!
     @IBOutlet weak var lblCalculate: UIButton!
     
+    @IBOutlet weak var txt_bodyWeight: UITextField!
+    
+    @IBOutlet weak var txt_sqRep: UITextField!
+    @IBOutlet weak var txt_sqWeight: UITextField!
+    @IBOutlet weak var txt_sqRpe: UITextField!
+    
+    @IBOutlet weak var txt_bnRep: UITextField!
+    @IBOutlet weak var txt_bnWeight: UITextField!
+    @IBOutlet weak var txt_bnRpe: UITextField!
+    
+    @IBOutlet weak var txt_dlRep: UITextField!
+    @IBOutlet weak var txt_dlWeight: UITextField!
+    @IBOutlet weak var txt_dlRpe: UITextField!
+    
+    
     
     
     override func viewDidLoad() {
@@ -72,14 +87,35 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func btnCalculate(_ sender: Any) {
-        print("calculate")
+        
+        if txt_bodyWeight.text == "" ||
+            txt_bodyWeight.text == "" ||
+            txt_sqRep.text == "" ||
+            txt_sqWeight.text == "" ||
+            txt_sqRpe.text == "" ||
+            txt_bnRep.text == "" ||
+            txt_bnWeight.text == "" ||
+            txt_bnRpe.text == "" ||
+            txt_dlRep.text == "" ||
+            txt_dlWeight.text == "" ||
+            txt_dlRpe.text == "" {
+            
+            let alert = UIAlertController(title: "", message: "Please provide all input fields!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue"{
+            let rvc = segue.destination as! ResultViewController
+            rvc.wilks = txt_bodyWeight.text!
+        }
+    }
 }
+
 
 // hide keyboard on tap anywhere
 extension UIViewController {

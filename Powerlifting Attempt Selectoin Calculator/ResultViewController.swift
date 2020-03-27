@@ -9,9 +9,19 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var txt_Wilks: UILabel!
+    @IBOutlet weak var txt_Total: UILabel!
+    
+    var wilks = String()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        txt_Wilks.text = wilks
 
         // Do any additional setup after loading the view.
     }
