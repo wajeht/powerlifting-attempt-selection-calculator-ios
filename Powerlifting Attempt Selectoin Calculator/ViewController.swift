@@ -114,6 +114,12 @@ class ViewController: UIViewController {
             rvc.wilks = txt_bodyWeight.text!
         }
     }
+    
+    
+    func oneRepMax(rep: Int, weight: Int, rpe: Int) -> Int {
+        let max = rep * weight * rpe
+        return max
+    }
 }
 
 
