@@ -920,6 +920,37 @@
                     <connections>
                         <outlet property="txt_Total" destination="E6S-um-zO9" id="Puu-tN-0rD"/>
                         <outlet property="txt_Wilks" destination="x2T-Qh-ou0" id="SDF-NM-fP9"/>
+                        <outlet property="txt_bn1RM" destination="9NQ-Dt-Y4a" id="ESu-aW-UMZ"/>
+                        <outlet property="txt_bn1_high" destination="zfh-uM-kLr" id="fno-Rl-oUf"/>
+                        <outlet property="txt_bn1_low" destination="Q1K-fb-HVF" id="YiJ-e8-dqo"/>
+                        <outlet property="txt_bn1_normal" destination="vb9-W1-nvm" id="jbs-M8-8tf"/>
+                        <outlet property="txt_bn2_high" destination="reF-uY-8v5" id="h23-hN-klc"/>
+                        <outlet property="txt_bn2_low" destination="j1r-Y2-QeM" id="sfV-dP-dWv"/>
+                        <outlet property="txt_bn2_normal" destination="ZUs-kE-lK2" id="JQy-Yu-Emm"/>
+                        <outlet property="txt_bn3_high" destination="NKe-Y0-0Sn" id="P64-1V-JAs"/>
+                        <outlet property="txt_bn3_low" destination="DcN-0p-PmQ" id="59a-bs-XRf"/>
+                        <outlet property="txt_bn3_normal" destination="xEw-es-nUo" id="bQW-AQ-uUZ"/>
+                        <outlet property="txt_dl1RM" destination="tF0-XL-Nof" id="4UD-IE-AvD"/>
+                        <outlet property="txt_dl1_high" destination="RXg-er-dhz" id="vxH-5f-XUQ"/>
+                        <outlet property="txt_dl1_low" destination="DLb-hM-Y4g" id="9OT-lq-bEb"/>
+                        <outlet property="txt_dl1_normal" destination="Q6A-74-zG0" id="8MC-U3-Ifm"/>
+                        <outlet property="txt_dl2_high" destination="W9d-7l-PSo" id="QUj-0H-vqS"/>
+                        <outlet property="txt_dl2_low" destination="Us8-GJ-CQk" id="vtl-gs-C5w"/>
+                        <outlet property="txt_dl2_normal" destination="qud-QD-WoX" id="Uxn-e4-347"/>
+                        <outlet property="txt_dl3_high" destination="o1R-ho-cMN" id="xPU-KI-LQj"/>
+                        <outlet property="txt_dl3_low" destination="qql-91-RBL" id="Qb4-aD-79E"/>
+                        <outlet property="txt_dl3_normal" destination="SH2-9y-8nZ" id="rVe-sB-F0Z"/>
+                        <outlet property="txt_sq1RM" destination="VNp-Y0-uTc" id="Y3I-oP-NWb"/>
+                        <outlet property="txt_sq1_high" destination="zz3-T0-ZgI" id="acr-q8-7ea"/>
+                        <outlet property="txt_sq1_low" destination="t4h-mT-cbh" id="XlX-lf-VtJ"/>
+                        <outlet property="txt_sq1_normal" destination="tfO-o5-hvR" id="2hU-iC-nyS"/>
+                        <outlet property="txt_sq2_high" destination="0BK-EA-1vN" id="bcX-bU-ycF"/>
+                        <outlet property="txt_sq2_low" destination="9t3-yR-Vvs" id="wRn-4N-YXe"/>
+                        <outlet property="txt_sq2_normal" destination="O1S-h6-uVo" id="fJz-yJ-XBN"/>
+                        <outlet property="txt_sq3_high" destination="tDv-VO-i04" id="BPa-Vd-eDH"/>
+                        <outlet property="txt_sq3_low" destination="dF1-pf-FdX" id="ESd-Wf-H7U"/>
+                        <outlet property="txt_sq3_normal" destination="oNc-jh-Mv7" id="nyX-da-Hz0"/>
+                        <outlet property="txt_totalAndWilks" destination="uj9-0F-tIy" id="vlM-9a-eLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66B-hn-Wcm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

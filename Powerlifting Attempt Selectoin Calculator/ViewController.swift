@@ -28,8 +28,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var txt_dlWeight: UITextField!
     @IBOutlet weak var txt_dlRpe: UITextField!
     
-    
-    
+    var sqRep = 0
+    var sqWeight = 0
+    var sqRpe = 0
+    var sqMax = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +58,6 @@ class ViewController: UIViewController {
     }
     // shift keyboard upword on textviw ends
     
-    
-    
     @IBAction func aboutAlert(_ sender: Any) {
         let alert = UIAlertController(title: "", message: "This app is free forever, but it still cost effort to maintain it on AppStore. Want to buy a cup of coffee?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in }))
@@ -65,7 +65,6 @@ class ViewController: UIViewController {
 
     }
     
-     
     @IBAction func btnMale(_ sender: Any) {
         
         if lblFemale.isSelected {
@@ -77,8 +76,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnFemale(_ sender: Any) {
-        
-        
         if lblMale.isSelected {
             lblMale.isSelected = false
             lblFemale.isSelected = true
@@ -109,16 +106,25 @@ class ViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        sqRep = Int(txt_sqRep.text ?? "") ?? 0
+        sqWeight = Int(txt_sqWeight.text ?? "") ?? 0
+        sqRpe = Int(txt_sqRpe.text ?? "") ?? 0
+        sqMax = Int(oneRepMax(rep: sqRpe, weight: sqWeight, rpe: sqRpe))
+        
         if segue.identifier == "segue"{
             let rvc = segue.destination as! ResultViewController
-            rvc.wilks = txt_bodyWeight.text!
+            rvc.sqOneRepMax = "SQUAT e1RM: " + String(sqMax)
         }
     }
     
     
-    func oneRepMax(rep: Int, weight: Int, rpe: Int) -> Int {
-        let max = rep * weight * rpe
-        return max
+    func oneRepMax(rep: Int, weight: Int, rpe: Int) -> Double {
+        let inside = ((10 - (rpe + 1)) + rep)
+        let inside1 = (Int) (Double(inside * weight) * 0.03)
+        let final = inside1 + weight
+
+        return Double(final)
     }
 }
 
