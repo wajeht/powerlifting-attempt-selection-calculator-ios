@@ -64,6 +64,11 @@ class ResultViewController: UIViewController {
     var total = String()
     
     var sqOneRepMax = String()
+    var bnOneRepMax = String()
+    var dlOneRepMax = String()
+
+    
+    
     
 
     override func viewDidLoad() {
@@ -72,6 +77,21 @@ class ResultViewController: UIViewController {
         txt_Wilks.text = wilks
         txt_Total.text = total
         txt_sq1RM.text = sqOneRepMax
+        txt_bn1RM.text = bnOneRepMax
+        txt_dl1RM.text = dlOneRepMax
+        
+        txt_sq1RM.layer.cornerRadius = 10
+        txt_sq1RM.clipsToBounds = true
+        
+        txt_bn1RM.layer.cornerRadius = 10
+        txt_bn1RM.clipsToBounds = true
+        
+        txt_dl1RM.layer.cornerRadius = 10
+        txt_dl1RM.clipsToBounds = true
+        
+        txt_totalAndWilks.layer.cornerRadius = 10
+        txt_totalAndWilks.clipsToBounds = true
+
 
         // Do any additional setup after loading the view.
     }

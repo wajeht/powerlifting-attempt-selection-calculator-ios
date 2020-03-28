@@ -33,6 +33,16 @@ class ViewController: UIViewController {
     var sqRpe = 0
     var sqMax = 0
     
+    var bnRep = 0
+    var bnWeight = 0
+    var bnRpe = 0
+    var bnMax = 0
+    
+    var dlRep = 0
+    var dlWeight = 0
+    var dlRpe = 0
+    var dlMax = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCalculate.layer.cornerRadius = 10
@@ -96,7 +106,8 @@ class ViewController: UIViewController {
             txt_bnRpe.text == "" ||
             txt_dlRep.text == "" ||
             txt_dlWeight.text == "" ||
-            txt_dlRpe.text == "" {
+            txt_dlRpe.text == ""
+            {
             
             let alert = UIAlertController(title: "", message: "Please provide all input fields!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in }))
@@ -110,21 +121,32 @@ class ViewController: UIViewController {
         sqRep = Int(txt_sqRep.text ?? "") ?? 0
         sqWeight = Int(txt_sqWeight.text ?? "") ?? 0
         sqRpe = Int(txt_sqRpe.text ?? "") ?? 0
-        sqMax = Int(oneRepMax(rep: sqRpe, weight: sqWeight, rpe: sqRpe))
+        sqMax = Int(oneRepMax(rep: sqRep, weight: sqWeight, rpe: sqRpe))
+        
+        bnRep = Int(txt_bnRep.text ?? "") ?? 0
+        bnWeight = Int(txt_bnWeight.text ?? "") ?? 0
+        bnRpe = Int(txt_bnRpe.text ?? "") ?? 0
+        bnMax = Int(oneRepMax(rep: bnRep, weight: bnWeight, rpe: bnRpe))
+        
+        dlRep = Int(txt_dlRep.text ?? "") ?? 0
+        dlWeight = Int(txt_dlWeight.text ?? "") ?? 0
+        dlRpe = Int(txt_dlRpe.text ?? "") ?? 0
+        dlMax = Int(oneRepMax(rep: dlRep, weight: dlWeight, rpe: dlRpe))
         
         if segue.identifier == "segue"{
             let rvc = segue.destination as! ResultViewController
             rvc.sqOneRepMax = "SQUAT e1RM: " + String(sqMax)
+            rvc.bnOneRepMax = "BENCH e1RM: " + String(bnMax)
+            rvc.dlOneRepMax = "DEADLIFT e1RM: " + String(dlMax)
+
         }
     }
     
     
     func oneRepMax(rep: Int, weight: Int, rpe: Int) -> Double {
-        let inside = ((10 - (rpe + 1)) + rep)
-        let inside1 = (Int) (Double(inside * weight) * 0.03)
-        let final = inside1 + weight
+        
 
-        return Double(final)
+        return Double(weight)
     }
 }
 
