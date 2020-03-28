@@ -43,6 +43,20 @@ class ViewController: UIViewController {
     var dlRpe = 0
     var dlMax = 0
     
+    var sq_firstAttempt = 0
+    var sq_secondAttempt = 0
+    var sq_thirdAttempt = 0
+    
+    var bn_firstAttempt = 0
+    var bn_secondAttempt = 0
+    var bn_thirdAttempt = 0
+    
+    var dl_firstAttempt = 0
+    var dl_secondAttempt = 0
+    var dl_thirdAttempt = 0
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCalculate.layer.cornerRadius = 10
@@ -122,24 +136,85 @@ class ViewController: UIViewController {
         sqWeight = Int(txt_sqWeight.text ?? "") ?? 0
         sqRpe = Int(txt_sqRpe.text ?? "") ?? 0
         sqMax = Int(oneRepMax(rep: sqRep, weight: sqWeight, rpe: sqRpe))
+        sq_firstAttempt = Int(Double( firstAttempt(oneRepMax: Double(sqMax))))
+        sq_secondAttempt = Int(Double( secondAttempt(oneRepMax: Double(sqMax))))
+        sq_thirdAttempt = Int(Double( thirdAttempt(oneRepMax: Double(sqMax))))
         
         bnRep = Int(txt_bnRep.text ?? "") ?? 0
         bnWeight = Int(txt_bnWeight.text ?? "") ?? 0
         bnRpe = Int(txt_bnRpe.text ?? "") ?? 0
         bnMax = Int(oneRepMax(rep: bnRep, weight: bnWeight, rpe: bnRpe))
+        bn_firstAttempt = Int(Double( firstAttempt(oneRepMax: Double(bnMax))))
+        bn_secondAttempt = Int(Double( secondAttempt(oneRepMax: Double(bnMax))))
+        bn_thirdAttempt = Int(Double( thirdAttempt(oneRepMax: Double(bnMax))))
         
         dlRep = Int(txt_dlRep.text ?? "") ?? 0
         dlWeight = Int(txt_dlWeight.text ?? "") ?? 0
         dlRpe = Int(txt_dlRpe.text ?? "") ?? 0
         dlMax = Int(oneRepMax(rep: dlRep, weight: dlWeight, rpe: dlRpe))
+        dl_firstAttempt = Int(Double( firstAttempt(oneRepMax: Double(dlMax))))
+        dl_secondAttempt = Int(Double( secondAttempt(oneRepMax: Double(dlMax))))
+        dl_thirdAttempt = Int(Double( thirdAttempt(oneRepMax: Double(dlMax))))
         
         if segue.identifier == "segue"{
             let rvc = segue.destination as! ResultViewController
             rvc.sqOneRepMax = "SQUAT e1RM: " + String(sqMax)
             rvc.bnOneRepMax = "BENCH e1RM: " + String(bnMax)
             rvc.dlOneRepMax = "DEADLIFT e1RM: " + String(dlMax)
+            
+            rvc.sq1_low = String((sq_firstAttempt - (Int(Double(sq_firstAttempt) * Double(0.01)))))
+            rvc.sq1_normal = String(sq_firstAttempt)
+            rvc.sq1_high = String((sq_firstAttempt + (Int(Double(sq_firstAttempt) * Double(0.02)))))
+            
+            rvc.sq2_low = String((sq_secondAttempt - (Int(Double(sq_secondAttempt) * Double(0.01)))))
+            rvc.sq2_normal = String(sq_secondAttempt)
+            rvc.sq2_high = String((sq_secondAttempt + (Int(Double(sq_secondAttempt) * Double(0.02)))))
+
+            rvc.sq3_low = String((sq_thirdAttempt - (Int(Double(sq_thirdAttempt) * Double(0.01)))))
+            rvc.sq3_normal = String(sq_thirdAttempt)
+            rvc.sq3_high = String((sq_thirdAttempt + (Int(Double(sq_thirdAttempt) * Double(0.02)))))
+            
+            
+
+            rvc.bn1_low = String((bn_firstAttempt - (Int(Double(bn_firstAttempt) * Double(0.01)))))
+            rvc.bn1_normal = String(bn_firstAttempt)
+            rvc.bn1_high = String((bn_firstAttempt + (Int(Double(bn_firstAttempt) * Double(0.02)))))
+            
+            rvc.bn2_low = String((bn_secondAttempt - (Int(Double(bn_secondAttempt) * Double(0.01)))))
+            rvc.bn2_normal = String(bn_secondAttempt)
+            rvc.bn2_high = String((bn_secondAttempt + (Int(Double(bn_secondAttempt) * Double(0.02)))))
+            
+            rvc.bn3_low = String((bn_thirdAttempt - (Int(Double(bn_thirdAttempt) * Double(0.01)))))
+            rvc.bn3_normal = String(bn_thirdAttempt)
+            rvc.bn3_high = String((bn_thirdAttempt + (Int(Double(bn_thirdAttempt) * Double(0.02)))))
+    
+            
+    
+            rvc.dl1_low = String((dl_firstAttempt - (Int(Double(dl_firstAttempt) * Double(0.01)))))
+            rvc.dl1_normal = String(dl_firstAttempt)
+            rvc.dl1_high = String((dl_firstAttempt + (Int(Double(dl_firstAttempt) * Double(0.02)))))
+        
+            rvc.dl2_low = String((dl_secondAttempt - (Int(Double(dl_secondAttempt) * Double(0.01)))))
+            rvc.dl2_normal = String(dl_secondAttempt)
+            rvc.dl2_high = String((dl_secondAttempt + (Int(Double(dl_secondAttempt) * Double(0.02)))))
+            
+            rvc.dl3_low = String((dl_thirdAttempt - (Int(Double(dl_thirdAttempt) * Double(0.01)))))
+            rvc.dl3_normal = String(dl_thirdAttempt)
+            rvc.dl3_high = String((dl_thirdAttempt + (Int(Double(dl_thirdAttempt) * Double(0.02)))))
 
         }
+    }
+    
+    func firstAttempt(oneRepMax: Double) -> Double {
+        return (oneRepMax * 0.91)
+    }
+    
+    func secondAttempt(oneRepMax: Double) -> Double {
+        return (oneRepMax * 0.96)
+    }
+    
+    func thirdAttempt(oneRepMax: Double) -> Double {
+        return (oneRepMax)
     }
     
     
