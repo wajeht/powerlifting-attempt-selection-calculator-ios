@@ -55,12 +55,19 @@ class ViewController: UIViewController {
     var dl_secondAttempt = 0
     var dl_thirdAttempt = 0
     
+    var total_squat = [Double]()
+    var total_bench = [Double]()
+    var total_deadlift = [Double]()
+
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCalculate.layer.cornerRadius = 10
         self.hideKeyboardWhenTappedAround()
+        
+
         
         // shift keyboard upword on textviw starts
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -201,10 +208,11 @@ class ViewController: UIViewController {
             rvc.dl3_low = String((dl_thirdAttempt - (Int(Double(dl_thirdAttempt) * Double(0.01)))))
             rvc.dl3_normal = String(dl_thirdAttempt)
             rvc.dl3_high = String((dl_thirdAttempt + (Int(Double(dl_thirdAttempt) * Double(0.02)))))
-
+            
         }
     }
     
+    // caltulations
     func firstAttempt(oneRepMax: Double) -> Double {
         return (oneRepMax * 0.91)
     }
@@ -217,14 +225,35 @@ class ViewController: UIViewController {
         return (oneRepMax)
     }
     
-    
     func oneRepMax(rep: Int, weight: Int, rpe: Int) -> Double {
         
 
         return Double(weight)
     }
-}
+    
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+}
 
 // hide keyboard on tap anywhere
 extension UIViewController {

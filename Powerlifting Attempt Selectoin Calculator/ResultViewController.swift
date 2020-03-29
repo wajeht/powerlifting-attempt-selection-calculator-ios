@@ -166,9 +166,6 @@ class ResultViewController: UIViewController {
         txt_dl3_low.text = dl3_low
         txt_dl3_normal.text = dl3_normal
         txt_dl3_high.text = dl3_high
-
-
         
-
     }
 }
