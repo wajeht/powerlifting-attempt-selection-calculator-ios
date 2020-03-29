@@ -55,19 +55,11 @@ class ViewController: UIViewController {
     var dl_secondAttempt = 0
     var dl_thirdAttempt = 0
     
-    var total_squat = [Double]()
-    var total_bench = [Double]()
-    var total_deadlift = [Double]()
-
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCalculate.layer.cornerRadius = 10
         self.hideKeyboardWhenTappedAround()
         
-
         
         // shift keyboard upword on textviw starts
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
