@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         
           if let url = NSURL(string: ("http://www.paypal.me/akonyein")) {
             let alert = UIAlertController(title: "", message: "This app is free forever, but it still cost effort to maintain it on AppStore. Want to buy a cup of coffee?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "N0", style: .default, handler: { (action) in
+            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
                }))
             alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: { (action) in
                 UIApplication.shared.openURL(url as URL)
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
             {
             
             let alert = UIAlertController(title: "", message: "Please provide all input fields!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Default action"), style: .default, handler: { _ in }))
             self.present(alert, animated: true, completion: nil)
         }
     }
