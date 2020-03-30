@@ -123,13 +123,13 @@ class ResultViewController: UIViewController {
         
         // rounded conner
         txt_sq1RM.layer.cornerRadius = 10
-        txt_sq1RM.clipsToBounds = true
+        txt_sq1RM.clipsToBounds = false
         txt_bn1RM.layer.cornerRadius = 10
-        txt_bn1RM.clipsToBounds = true
+        txt_bn1RM.clipsToBounds = false
         txt_dl1RM.layer.cornerRadius = 10
-        txt_dl1RM.clipsToBounds = true
+        txt_dl1RM.clipsToBounds = false
         txt_totalAndWilks.layer.cornerRadius = 10
-        txt_totalAndWilks.clipsToBounds = true
+        txt_totalAndWilks.clipsToBounds = false
         
         
         // squat attemtps
@@ -250,6 +250,8 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq1_low.backgroundColor = UIColor.white
+        txt_sq1_low.layer.cornerRadius = 10
+        txt_sq1_low.clipsToBounds = true
         txt_sq1_low.textColor = UIColor.black
 
     }
@@ -272,6 +274,8 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq1_normal.backgroundColor = UIColor.white
+        txt_sq1_normal.layer.cornerRadius = 10
+        txt_sq1_normal.clipsToBounds = true
         txt_sq1_normal.textColor = UIColor.black
 
     }
@@ -292,17 +296,18 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq1_high.backgroundColor = UIColor.white
+        txt_sq1_high.layer.cornerRadius = 10
+        txt_sq1_high.clipsToBounds = true
         txt_sq1_high.textColor = UIColor.black
 
     }
-    
     
     
     @objc func tap_sq2_low(){
         total_squat.append((txt_sq2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_sq2_low.backgroundColor = UIColor.red
-        txt_sq2_low.layer.cornerRadius = 20
+        txt_sq2_low.layer.cornerRadius = 10
         txt_sq2_low.clipsToBounds = true
         txt_sq2_low.textColor = UIColor.white
         
@@ -314,6 +319,8 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq2_low.backgroundColor = UIColor.white
+        txt_sq2_low.layer.cornerRadius = 10
+        txt_sq2_low.clipsToBounds = true
         txt_sq2_low.textColor = UIColor.black
 
     }
@@ -324,7 +331,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_sq2_normal.backgroundColor = UIColor.red
-        txt_sq2_normal.layer.cornerRadius = 20
+        txt_sq2_normal.layer.cornerRadius = 10
         txt_sq2_normal.clipsToBounds = true
         txt_sq2_normal.textColor = UIColor.white
         
@@ -336,6 +343,8 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq2_normal.backgroundColor = UIColor.white
+        txt_sq2_normal.layer.cornerRadius = 10
+        txt_sq2_normal.clipsToBounds = true
         txt_sq2_normal.textColor = UIColor.black
 
     }
@@ -344,7 +353,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_sq2_high.backgroundColor = UIColor.red
-        txt_sq2_high.layer.cornerRadius = 20
+        txt_sq2_high.layer.cornerRadius = 10
         txt_sq2_high.clipsToBounds = true
         txt_sq2_high.textColor = UIColor.white
         
@@ -356,16 +365,20 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq2_high.backgroundColor = UIColor.white
+        txt_sq2_high.layer.cornerRadius = 10
+        txt_sq2_high.clipsToBounds = true
         txt_sq2_high.textColor = UIColor.black
 
     }
+    
+    
     
 
     @objc func tap_sq3_low(){
         total_squat.append((txt_sq3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_sq3_low.backgroundColor = UIColor.red
-        txt_sq3_low.layer.cornerRadius = 30
+        txt_sq3_low.layer.cornerRadius = 10
         txt_sq3_low.clipsToBounds = true
         txt_sq3_low.textColor = UIColor.white
         
@@ -377,6 +390,8 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq3_low.backgroundColor = UIColor.white
+        txt_sq3_low.layer.cornerRadius = 10
+        txt_sq3_low.clipsToBounds = true
         txt_sq3_low.textColor = UIColor.black
 
     }
@@ -387,7 +402,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_sq3_normal.backgroundColor = UIColor.red
-        txt_sq3_normal.layer.cornerRadius = 30
+        txt_sq3_normal.layer.cornerRadius = 10
         txt_sq3_normal.clipsToBounds = true
         txt_sq3_normal.textColor = UIColor.white
         
@@ -399,6 +414,8 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq3_normal.backgroundColor = UIColor.white
+        txt_sq3_normal.layer.cornerRadius = 10
+        txt_sq3_normal.clipsToBounds = true
         txt_sq3_normal.textColor = UIColor.black
 
     }
@@ -407,7 +424,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_sq3_high.backgroundColor = UIColor.red
-        txt_sq3_high.layer.cornerRadius = 30
+        txt_sq3_high.layer.cornerRadius = 10
         txt_sq3_high.clipsToBounds = true
         txt_sq3_high.textColor = UIColor.white
         
@@ -419,6 +436,8 @@ class ResultViewController: UIViewController {
         }
         txt_Total.text = String(showTotal())
         txt_sq3_high.backgroundColor = UIColor.white
+        txt_sq3_high.layer.cornerRadius = 10
+        txt_sq3_high.clipsToBounds = true
         txt_sq3_high.textColor = UIColor.black
 
     }
