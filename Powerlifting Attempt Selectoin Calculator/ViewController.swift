@@ -57,10 +57,14 @@ class ViewController: UIViewController {
     
     var bodyWeight = 0.0
     
+    var autoGender = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCalculate.layer.cornerRadius = 10
         self.hideKeyboardWhenTappedAround()
+        
+        lblMale.isSelected = autoGender
         
         // shift keyboard upword on textviw starts
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
