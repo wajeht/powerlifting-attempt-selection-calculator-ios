@@ -87,9 +87,16 @@ class ViewController: UIViewController {
     // shift keyboard upword on textviw ends
     
     @IBAction func aboutAlert(_ sender: Any) {
-        let alert = UIAlertController(title: "", message: "This app is free forever, but it still cost effort to maintain it on AppStore. Want to buy a cup of coffee?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in }))
-        self.present(alert, animated: true, completion: nil)
+        
+          if let url = NSURL(string: ("http://www.paypal.me/akonyein")) {
+            
+            let alert = UIAlertController(title: "", message: "This app is free forever, but it still cost effort to maintain it on AppStore. Want to buy a cup of coffee?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "YESS!!", style: .default, handler: { (action) in
+                UIApplication.shared.openURL(url as URL)
+              }))
+                              
+            self.present(alert, animated: true, completion: nil)
+          }
 
     }
     
