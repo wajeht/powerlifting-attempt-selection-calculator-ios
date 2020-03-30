@@ -106,13 +106,14 @@ class ResultViewController: UIViewController {
     var dl3_normal = String()
     var dl3_high = String()
     
-    
     var total_squat = [Double]()
     var total_bench = [Double]()
     var total_deadlift = [Double]()
+        
+    var wilksStuff = 0.0
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
         
         // one rep maxes and wilks
         txt_Wilks.text = wilks
@@ -123,13 +124,13 @@ class ResultViewController: UIViewController {
         
         // rounded conner
         txt_sq1RM.layer.cornerRadius = 10
-        txt_sq1RM.clipsToBounds = false
+        txt_sq1RM.clipsToBounds = true
         txt_bn1RM.layer.cornerRadius = 10
-        txt_bn1RM.clipsToBounds = false
+        txt_bn1RM.clipsToBounds = true
         txt_dl1RM.layer.cornerRadius = 10
-        txt_dl1RM.clipsToBounds = false
+        txt_dl1RM.clipsToBounds = true
         txt_totalAndWilks.layer.cornerRadius = 10
-        txt_totalAndWilks.clipsToBounds = false
+        txt_totalAndWilks.clipsToBounds = true
         
         
         // squat attemtps
@@ -231,13 +232,15 @@ class ResultViewController: UIViewController {
         
     }
     
-
-
-    
+    func wilksTotal() -> Double {
+        return wilksStuff  + showTotal()
+    }
+        
     @objc func tap_sq1_low(){
         total_squat.append((txt_sq1_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq1_low.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+        txt_sq1_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_low.layer.cornerRadius = 10
         txt_sq1_low.clipsToBounds = true
         txt_sq1_low.textColor = UIColor.white
@@ -249,6 +252,7 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
+        txt_Wilks.text = String(wilksTotal())
         txt_sq1_low.backgroundColor = UIColor.white
         txt_sq1_low.layer.cornerRadius = 10
         txt_sq1_low.clipsToBounds = true
@@ -261,7 +265,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq1_normal(){
         total_squat.append((txt_sq1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq1_normal.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_normal.layer.cornerRadius = 10
         txt_sq1_normal.clipsToBounds = true
         txt_sq1_normal.textColor = UIColor.white
@@ -273,6 +279,8 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
+        txt_Wilks.text = String(wilksTotal())
+
         txt_sq1_normal.backgroundColor = UIColor.white
         txt_sq1_normal.layer.cornerRadius = 10
         txt_sq1_normal.clipsToBounds = true
@@ -283,7 +291,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq1_high(){
         total_squat.append((txt_sq1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq1_high.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_high.layer.cornerRadius = 10
         txt_sq1_high.clipsToBounds = true
         txt_sq1_high.textColor = UIColor.white
@@ -306,7 +316,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq2_low(){
         total_squat.append((txt_sq2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq2_low.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_low.layer.cornerRadius = 10
         txt_sq2_low.clipsToBounds = true
         txt_sq2_low.textColor = UIColor.white
@@ -318,6 +330,8 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
+        txt_Wilks.text = String(wilksTotal())
+
         txt_sq2_low.backgroundColor = UIColor.white
         txt_sq2_low.layer.cornerRadius = 10
         txt_sq2_low.clipsToBounds = true
@@ -330,7 +344,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq2_normal(){
         total_squat.append((txt_sq2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq2_normal.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_normal.layer.cornerRadius = 10
         txt_sq2_normal.clipsToBounds = true
         txt_sq2_normal.textColor = UIColor.white
@@ -342,6 +358,8 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
+        txt_Wilks.text = String(wilksTotal())
+
         txt_sq2_normal.backgroundColor = UIColor.white
         txt_sq2_normal.layer.cornerRadius = 10
         txt_sq2_normal.clipsToBounds = true
@@ -352,7 +370,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq2_high(){
         total_squat.append((txt_sq2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq2_high.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_high.layer.cornerRadius = 10
         txt_sq2_high.clipsToBounds = true
         txt_sq2_high.textColor = UIColor.white
@@ -377,7 +397,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq3_low(){
         total_squat.append((txt_sq3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq3_low.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_low.layer.cornerRadius = 10
         txt_sq3_low.clipsToBounds = true
         txt_sq3_low.textColor = UIColor.white
@@ -389,6 +411,8 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
+        txt_Wilks.text = String(wilksTotal())
+
         txt_sq3_low.backgroundColor = UIColor.white
         txt_sq3_low.layer.cornerRadius = 10
         txt_sq3_low.clipsToBounds = true
@@ -401,7 +425,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq3_normal(){
         total_squat.append((txt_sq3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq3_normal.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_normal.layer.cornerRadius = 10
         txt_sq3_normal.clipsToBounds = true
         txt_sq3_normal.textColor = UIColor.white
@@ -413,6 +439,8 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
+        txt_Wilks.text = String(wilksTotal())
+
         txt_sq3_normal.backgroundColor = UIColor.white
         txt_sq3_normal.layer.cornerRadius = 10
         txt_sq3_normal.clipsToBounds = true
@@ -423,7 +451,9 @@ class ResultViewController: UIViewController {
     @objc func tap_sq3_high(){
         total_squat.append((txt_sq3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_sq3_high.backgroundColor = UIColor.red
+        txt_Wilks.text = String(wilksTotal())
+
+        txt_sq3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_high.layer.cornerRadius = 10
         txt_sq3_high.clipsToBounds = true
         txt_sq3_high.textColor = UIColor.white
@@ -496,5 +526,27 @@ class ResultViewController: UIViewController {
     }
     func showTotal() -> Double {
         return highestSquatAttempt() + highestBenchAttempt() + highestDeadliftAttempt()
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }

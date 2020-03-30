@@ -288,10 +288,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="S4W-Z8-fet"/>
                     <connections>
                         <outlet property="lblCalculate" destination="wXp-wN-mIw" id="8f4-ka-p0w"/>
-                        <outlet property="lblFemale" destination="XQm-w5-BII" id="x2y-1P-QkI"/>
-                        <outlet property="lblMale" destination="rlV-gA-Bm1" id="Reg-jk-IJM"/>
+                        <outlet property="lblFemale" destination="XQm-w5-BII" id="uS0-AQ-jlY"/>
+                        <outlet property="lblMale" destination="rlV-gA-Bm1" id="NVD-OU-qZW"/>
                         <outlet property="txt_bnRep" destination="Ijd-XF-OwS" id="PRi-2D-f3J"/>
                         <outlet property="txt_bnRpe" destination="9l0-bK-JYi" id="a8G-qk-Ct4"/>
                         <outlet property="txt_bnWeight" destination="4IL-6F-RWu" id="LiO-JO-AEq"/>

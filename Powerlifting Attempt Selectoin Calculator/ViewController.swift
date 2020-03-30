@@ -55,11 +55,12 @@ class ViewController: UIViewController {
     var dl_secondAttempt = 0
     var dl_thirdAttempt = 0
     
+    var bodyWeight = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCalculate.layer.cornerRadius = 10
         self.hideKeyboardWhenTappedAround()
-        
         
         // shift keyboard upword on textviw starts
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -155,8 +156,18 @@ class ViewController: UIViewController {
         dl_secondAttempt = Int(Double( secondAttempt(oneRepMax: Double(dlMax))))
         dl_thirdAttempt = Int(Double( thirdAttempt(oneRepMax: Double(dlMax))))
         
+        bodyWeight = Double(txt_bodyWeight.text ?? "") ?? 0.0
+        
+        
         if segue.identifier == "segue"{
             let rvc = segue.destination as! ResultViewController
+            
+            if lblMale.isSelected {
+                rvc.wilksStuff = bodyWeight * 1
+            } else if lblFemale.isSelected{
+                rvc.wilksStuff = bodyWeight * 1/2
+            }
+            
             rvc.sqOneRepMax = "SQUAT e1RM: " + String(sqMax)
             rvc.bnOneRepMax = "BENCH e1RM: " + String(bnMax)
             rvc.dlOneRepMax = "DEADLIFT e1RM: " + String(dlMax)
@@ -203,6 +214,8 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    
     
     // caltulations
     func firstAttempt(oneRepMax: Double) -> Double {
