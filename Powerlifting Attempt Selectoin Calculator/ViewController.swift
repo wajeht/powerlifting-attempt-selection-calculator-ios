@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+
 
 class ViewController: UIViewController {
 
@@ -136,6 +138,15 @@ class ViewController: UIViewController {
             {
             
             let alert = UIAlertController(title: "", message: "Please provide all input fields!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Default action"), style: .default, handler: { _ in }))
+            self.present(alert, animated: true, completion: nil)
+        }
+
+        
+        else if (!txt_sqRpe.text!.isInt ||
+                !txt_bnRpe.text!.isInt ||
+                !txt_dlRpe.text!.isInt){
+        let alert = UIAlertController(title: "", message: "Lets be objective. If an RPE is 7.5, you should put 8 instead for accurate rating!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Default action"), style: .default, handler: { _ in }))
             self.present(alert, animated: true, completion: nil)
         }
@@ -322,5 +333,11 @@ extension UIViewController {
 
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension String {
+    var isInt: Bool {
+        return Int(self) != nil
     }
 }
