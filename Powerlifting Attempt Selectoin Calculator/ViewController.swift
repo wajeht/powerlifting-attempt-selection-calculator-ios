@@ -93,7 +93,7 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
                }))
             alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: { (action) in
-                UIApplication.shared.openURL(url as URL)
+                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
               }))
                               
             self.present(alert, animated: true, completion: nil)
@@ -184,7 +184,6 @@ class ViewController: UIViewController {
             
             rvc.bodyWeight = String(txt_bodyWeight.text ?? "")
             
-            
             rvc.sqOneRepMax = "SQUAT e1RM: " + String(sqMax)
             rvc.bnOneRepMax = "BENCH e1RM: " + String(bnMax)
             rvc.dlOneRepMax = "DEADLIFT e1RM: " + String(dlMax)
@@ -228,15 +227,12 @@ class ViewController: UIViewController {
             rvc.dl3_low = String((dl_thirdAttempt - (Int(Double(dl_thirdAttempt) * Double(0.01)))))
             rvc.dl3_normal = String(dl_thirdAttempt)
             rvc.dl3_high = String((dl_thirdAttempt + (Int(Double(dl_thirdAttempt) * Double(0.02)))))
-            
-            
         }
     }
     
     func wilks(bodyweight: Double) -> Double
     {
         let  bw = (bodyweight / 2.2);
-
         var  result = 0.0;
 
         if (lblMale.isSelected)
@@ -250,7 +246,6 @@ class ViewController: UIViewController {
                     ((0.00000701863)*(pow(bw,4))) -
                     ((0.00000001291)*(pow(bw,5)))
                 );
-
         }
         else if (lblFemale.isSelected)
         {
@@ -282,7 +277,6 @@ class ViewController: UIViewController {
         return (oneRepMax)
     }
     
-
     func oneRepMax(rep: Int, weight: Int, rpe: Int) -> Double {
         
         let middle = ((10 - (rpe + 1)) + rep)

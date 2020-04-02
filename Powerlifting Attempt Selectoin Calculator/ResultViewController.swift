@@ -118,8 +118,6 @@ class ResultViewController: UIViewController {
     var wilksStuff = 0.0
 
     override func viewDidLoad() {
-        
-        
         // one rep maxes and wilks
         txt_Wilks.text = wilks
         txt_Total.text = total
@@ -136,7 +134,6 @@ class ResultViewController: UIViewController {
         txt_dl1RM.clipsToBounds = true
         txt_totalAndWilks.layer.cornerRadius = 10
         txt_totalAndWilks.clipsToBounds = true
-        
         
         // squat attemtps
         txt_sq1_low.text = sq1_low
@@ -164,7 +161,6 @@ class ResultViewController: UIViewController {
         txt_bn3_normal.text = bn3_normal
         txt_bn3_high.text = bn3_high
         
-        
         // dl attemtps
         txt_dl1_low.text = dl1_low
         txt_dl1_normal.text = dl1_normal
@@ -186,7 +182,6 @@ class ResultViewController: UIViewController {
         txt_sq1_low.addGestureRecognizer(stap_txt_sq1_low)
         txt_sq1_low.addGestureRecognizer(ltap_txt_sq1_low)
 
-        
         let stap_txt_sq1_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_sq1_normal))
         let ltap_txt_sq1_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_sq1_normal))
         txt_sq1_normal.addGestureRecognizer(stap_txt_sq1_normal)
@@ -197,14 +192,10 @@ class ResultViewController: UIViewController {
         txt_sq1_high.addGestureRecognizer(stap_txt_sq1_high)
         txt_sq1_high.addGestureRecognizer(ltap_txt_sq1_high)
         
-        
-        
-        
         let stap_txt_sq2_low = UITapGestureRecognizer(target: self,  action: #selector(tap_sq2_low))
         let ltap_txt_sq2_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_sq2_low))
         txt_sq2_low.addGestureRecognizer(stap_txt_sq2_low)
         txt_sq2_low.addGestureRecognizer(ltap_txt_sq2_low)
-
         
         let stap_txt_sq2_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_sq2_normal))
         let ltap_txt_sq2_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_sq2_normal))
@@ -216,13 +207,10 @@ class ResultViewController: UIViewController {
         txt_sq2_high.addGestureRecognizer(stap_txt_sq2_high)
         txt_sq2_high.addGestureRecognizer(ltap_txt_sq2_high)
         
-        
-        
         let stap_txt_sq3_low = UITapGestureRecognizer(target: self,  action: #selector(tap_sq3_low))
         let ltap_txt_sq3_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_sq3_low))
         txt_sq3_low.addGestureRecognizer(stap_txt_sq3_low)
         txt_sq3_low.addGestureRecognizer(ltap_txt_sq3_low)
-
         
         let stap_txt_sq3_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_sq3_normal))
         let ltap_txt_sq3_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_sq3_normal))
@@ -234,15 +222,11 @@ class ResultViewController: UIViewController {
         txt_sq3_high.addGestureRecognizer(stap_txt_sq3_high)
         txt_sq3_high.addGestureRecognizer(ltap_txt_sq3_high)
         
-        
-        
-        
         let stap_txt_bn1_low = UITapGestureRecognizer(target: self,  action: #selector(tap_bn1_low))
         let ltap_txt_bn1_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_bn1_low))
         txt_bn1_low.addGestureRecognizer(stap_txt_bn1_low)
         txt_bn1_low.addGestureRecognizer(ltap_txt_bn1_low)
 
-        
         let stap_txt_bn1_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_bn1_normal))
         let ltap_txt_bn1_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_bn1_normal))
         txt_bn1_normal.addGestureRecognizer(stap_txt_bn1_normal)
@@ -253,15 +237,11 @@ class ResultViewController: UIViewController {
         txt_bn1_high.addGestureRecognizer(stap_txt_bn1_high)
         txt_bn1_high.addGestureRecognizer(ltap_txt_bn1_high)
         
-        
-        
-        
         let stap_txt_bn2_low = UITapGestureRecognizer(target: self,  action: #selector(tap_bn2_low))
         let ltap_txt_bn2_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_bn2_low))
         txt_bn2_low.addGestureRecognizer(stap_txt_bn2_low)
         txt_bn2_low.addGestureRecognizer(ltap_txt_bn2_low)
 
-        
         let stap_txt_bn2_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_bn2_normal))
         let ltap_txt_bn2_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_bn2_normal))
         txt_bn2_normal.addGestureRecognizer(stap_txt_bn2_normal)
@@ -272,14 +252,11 @@ class ResultViewController: UIViewController {
         txt_bn2_high.addGestureRecognizer(stap_txt_bn2_high)
         txt_bn2_high.addGestureRecognizer(ltap_txt_bn2_high)
         
-        
-        
         let stap_txt_bn3_low = UITapGestureRecognizer(target: self,  action: #selector(tap_bn3_low))
         let ltap_txt_bn3_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_bn3_low))
         txt_bn3_low.addGestureRecognizer(stap_txt_bn3_low)
         txt_bn3_low.addGestureRecognizer(ltap_txt_bn3_low)
 
-        
         let stap_txt_bn3_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_bn3_normal))
         let ltap_txt_bn3_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_bn3_normal))
         txt_bn3_normal.addGestureRecognizer(stap_txt_bn3_normal)
@@ -290,13 +267,11 @@ class ResultViewController: UIViewController {
         txt_bn3_high.addGestureRecognizer(stap_txt_bn3_high)
         txt_bn3_high.addGestureRecognizer(ltap_txt_bn3_high)
         
-        
         let stap_txt_dl1_low = UITapGestureRecognizer(target: self,  action: #selector(tap_dl1_low))
         let ltap_txt_dl1_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_dl1_low))
         txt_dl1_low.addGestureRecognizer(stap_txt_dl1_low)
         txt_dl1_low.addGestureRecognizer(ltap_txt_dl1_low)
 
-        
         let stap_txt_dl1_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_dl1_normal))
         let ltap_txt_dl1_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_dl1_normal))
         txt_dl1_normal.addGestureRecognizer(stap_txt_dl1_normal)
@@ -307,14 +282,10 @@ class ResultViewController: UIViewController {
         txt_dl1_high.addGestureRecognizer(stap_txt_dl1_high)
         txt_dl1_high.addGestureRecognizer(ltap_txt_dl1_high)
         
-        
-        
-        
         let stap_txt_dl2_low = UITapGestureRecognizer(target: self,  action: #selector(tap_dl2_low))
         let ltap_txt_dl2_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_dl2_low))
         txt_dl2_low.addGestureRecognizer(stap_txt_dl2_low)
         txt_dl2_low.addGestureRecognizer(ltap_txt_dl2_low)
-
         
         let stap_txt_dl2_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_dl2_normal))
         let ltap_txt_dl2_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_dl2_normal))
@@ -327,12 +298,10 @@ class ResultViewController: UIViewController {
         txt_dl2_high.addGestureRecognizer(ltap_txt_dl2_high)
         
         
-        
         let stap_txt_dl3_low = UITapGestureRecognizer(target: self,  action: #selector(tap_dl3_low))
         let ltap_txt_dl3_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_dl3_low))
         txt_dl3_low.addGestureRecognizer(stap_txt_dl3_low)
         txt_dl3_low.addGestureRecognizer(ltap_txt_dl3_low)
-
         
         let stap_txt_dl3_normal = UITapGestureRecognizer(target: self,  action: #selector(tap_dl3_normal))
         let ltap_txt_dl3_normal = UILongPressGestureRecognizer(target: self,  action: #selector(untap_dl3_normal))
@@ -343,9 +312,6 @@ class ResultViewController: UIViewController {
         let ltap_txt_dl3_high = UILongPressGestureRecognizer(target: self,  action: #selector(untap_dl3_high))
         txt_dl3_high.addGestureRecognizer(stap_txt_dl3_high)
         txt_dl3_high.addGestureRecognizer(ltap_txt_dl3_high)
-        
-
-        
     }
     
     func wilksTotal() -> Double {
@@ -364,7 +330,7 @@ class ResultViewController: UIViewController {
     }
     
     @objc func untap_sq1_low(){
-        while let certainIndex = total_squat.index(of: (txt_sq1_low.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq1_low.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -373,51 +339,42 @@ class ResultViewController: UIViewController {
         txt_sq1_low.layer.cornerRadius = 10
         txt_sq1_low.clipsToBounds = true
         txt_sq1_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_sq1_normal(){
         total_squat.append((txt_sq1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_normal.layer.cornerRadius = 10
         txt_sq1_normal.clipsToBounds = true
         txt_sq1_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq1_normal(){
-        while let certainIndex = total_squat.index(of: (txt_sq1_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq1_normal.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq1_normal.backgroundColor = UIColor.white
         txt_sq1_normal.layer.cornerRadius = 10
         txt_sq1_normal.clipsToBounds = true
         txt_sq1_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_sq1_high(){
         total_squat.append((txt_sq1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_high.layer.cornerRadius = 10
         txt_sq1_high.clipsToBounds = true
         txt_sq1_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq1_high(){
-        while let certainIndex = total_squat.index(of: (txt_sq1_high.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq1_high.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -425,78 +382,65 @@ class ResultViewController: UIViewController {
         txt_sq1_high.layer.cornerRadius = 10
         txt_sq1_high.clipsToBounds = true
         txt_sq1_high.textColor = UIColor.black
-
     }
-    
     
     @objc func tap_sq2_low(){
         total_squat.append((txt_sq2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_low.layer.cornerRadius = 10
         txt_sq2_low.clipsToBounds = true
         txt_sq2_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq2_low(){
-        while let certainIndex = total_squat.index(of: (txt_sq2_low.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq2_low.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq2_low.backgroundColor = UIColor.white
         txt_sq2_low.layer.cornerRadius = 10
         txt_sq2_low.clipsToBounds = true
         txt_sq2_low.textColor = UIColor.black
-
     }
-    
     
     
     @objc func tap_sq2_normal(){
         total_squat.append((txt_sq2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_normal.layer.cornerRadius = 10
         txt_sq2_normal.clipsToBounds = true
         txt_sq2_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq2_normal(){
-        while let certainIndex = total_squat.index(of: (txt_sq2_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq2_normal.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq2_normal.backgroundColor = UIColor.white
         txt_sq2_normal.layer.cornerRadius = 10
         txt_sq2_normal.clipsToBounds = true
         txt_sq2_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_sq2_high(){
         total_squat.append((txt_sq2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_high.layer.cornerRadius = 10
         txt_sq2_high.clipsToBounds = true
         txt_sq2_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq2_high(){
-        while let certainIndex = total_squat.index(of: (txt_sq2_high.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq2_high.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -504,80 +448,64 @@ class ResultViewController: UIViewController {
         txt_sq2_high.layer.cornerRadius = 10
         txt_sq2_high.clipsToBounds = true
         txt_sq2_high.textColor = UIColor.black
-
     }
     
-    
-    
-
     @objc func tap_sq3_low(){
         total_squat.append((txt_sq3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_low.layer.cornerRadius = 10
         txt_sq3_low.clipsToBounds = true
         txt_sq3_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq3_low(){
-        while let certainIndex = total_squat.index(of: (txt_sq3_low.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq3_low.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq3_low.backgroundColor = UIColor.white
         txt_sq3_low.layer.cornerRadius = 10
         txt_sq3_low.clipsToBounds = true
         txt_sq3_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_sq3_normal(){
         total_squat.append((txt_sq3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_normal.layer.cornerRadius = 10
         txt_sq3_normal.clipsToBounds = true
         txt_sq3_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq3_normal(){
-        while let certainIndex = total_squat.index(of: (txt_sq3_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq3_normal.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq3_normal.backgroundColor = UIColor.white
         txt_sq3_normal.layer.cornerRadius = 10
         txt_sq3_normal.clipsToBounds = true
         txt_sq3_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_sq3_high(){
         total_squat.append((txt_sq3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_sq3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_high.layer.cornerRadius = 10
         txt_sq3_high.clipsToBounds = true
         txt_sq3_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq3_high(){
-        while let certainIndex = total_squat.index(of: (txt_sq3_high.text! as NSString).doubleValue){
+        while let certainIndex = total_squat.firstIndex(of: (txt_sq3_high.text! as NSString).doubleValue){
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -585,9 +513,7 @@ class ResultViewController: UIViewController {
         txt_sq3_high.layer.cornerRadius = 10
         txt_sq3_high.clipsToBounds = true
         txt_sq3_high.textColor = UIColor.black
-
     }
-    
     
     @objc func tap_bn1_low(){
         total_bench.append((txt_bn1_low.text! as NSString).doubleValue)
@@ -597,11 +523,10 @@ class ResultViewController: UIViewController {
         txt_bn1_low.layer.cornerRadius = 10
         txt_bn1_low.clipsToBounds = true
         txt_bn1_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn1_low(){
-        while let certainIndex = total_bench.index(of: (txt_bn1_low.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn1_low.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -610,51 +535,42 @@ class ResultViewController: UIViewController {
         txt_bn1_low.layer.cornerRadius = 10
         txt_bn1_low.clipsToBounds = true
         txt_bn1_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_bn1_normal(){
         total_bench.append((txt_bn1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn1_normal.layer.cornerRadius = 10
         txt_bn1_normal.clipsToBounds = true
         txt_bn1_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn1_normal(){
-        while let certainIndex = total_bench.index(of: (txt_bn1_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn1_normal.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn1_normal.backgroundColor = UIColor.white
         txt_bn1_normal.layer.cornerRadius = 10
         txt_bn1_normal.clipsToBounds = true
         txt_bn1_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_bn1_high(){
         total_bench.append((txt_bn1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn1_high.layer.cornerRadius = 10
         txt_bn1_high.clipsToBounds = true
         txt_bn1_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn1_high(){
-        while let certainIndex = total_bench.index(of: (txt_bn1_high.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn1_high.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -662,7 +578,6 @@ class ResultViewController: UIViewController {
         txt_bn1_high.layer.cornerRadius = 10
         txt_bn1_high.clipsToBounds = true
         txt_bn1_high.textColor = UIColor.black
-
     }
     
     
@@ -670,70 +585,58 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn2_low.layer.cornerRadius = 10
         txt_bn2_low.clipsToBounds = true
         txt_bn2_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn2_low(){
-        while let certainIndex = total_bench.index(of: (txt_bn2_low.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn2_low.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn2_low.backgroundColor = UIColor.white
         txt_bn2_low.layer.cornerRadius = 10
         txt_bn2_low.clipsToBounds = true
         txt_bn2_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_bn2_normal(){
         total_bench.append((txt_bn2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn2_normal.layer.cornerRadius = 10
         txt_bn2_normal.clipsToBounds = true
         txt_bn2_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn2_normal(){
-        while let certainIndex = total_bench.index(of: (txt_bn2_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn2_normal.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn2_normal.backgroundColor = UIColor.white
         txt_bn2_normal.layer.cornerRadius = 10
         txt_bn2_normal.clipsToBounds = true
         txt_bn2_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_bn2_high(){
         total_bench.append((txt_bn2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn2_high.layer.cornerRadius = 10
         txt_bn2_high.clipsToBounds = true
         txt_bn2_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn2_high(){
-        while let certainIndex = total_bench.index(of: (txt_bn2_high.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn2_high.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -741,80 +644,64 @@ class ResultViewController: UIViewController {
         txt_bn2_high.layer.cornerRadius = 10
         txt_bn2_high.clipsToBounds = true
         txt_bn2_high.textColor = UIColor.black
-
     }
-    
-    
-    
 
     @objc func tap_bn3_low(){
         total_bench.append((txt_bn3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn3_low.layer.cornerRadius = 10
         txt_bn3_low.clipsToBounds = true
         txt_bn3_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn3_low(){
-        while let certainIndex = total_bench.index(of: (txt_bn3_low.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn3_low.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn3_low.backgroundColor = UIColor.white
         txt_bn3_low.layer.cornerRadius = 10
         txt_bn3_low.clipsToBounds = true
         txt_bn3_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_bn3_normal(){
         total_bench.append((txt_bn3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn3_normal.layer.cornerRadius = 10
         txt_bn3_normal.clipsToBounds = true
         txt_bn3_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn3_normal(){
-        while let certainIndex = total_bench.index(of: (txt_bn3_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn3_normal.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn3_normal.backgroundColor = UIColor.white
         txt_bn3_normal.layer.cornerRadius = 10
         txt_bn3_normal.clipsToBounds = true
         txt_bn3_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_bn3_high(){
         total_bench.append((txt_bn3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_bn3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn3_high.layer.cornerRadius = 10
         txt_bn3_high.clipsToBounds = true
         txt_bn3_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_bn3_high(){
-        while let certainIndex = total_bench.index(of: (txt_bn3_high.text! as NSString).doubleValue){
+        while let certainIndex = total_bench.firstIndex(of: (txt_bn3_high.text! as NSString).doubleValue){
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -822,7 +709,6 @@ class ResultViewController: UIViewController {
         txt_bn3_high.layer.cornerRadius = 10
         txt_bn3_high.clipsToBounds = true
         txt_bn3_high.textColor = UIColor.black
-
     }
     
     @objc func tap_dl1_low(){
@@ -833,11 +719,10 @@ class ResultViewController: UIViewController {
         txt_dl1_low.layer.cornerRadius = 10
         txt_dl1_low.clipsToBounds = true
         txt_dl1_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl1_low(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl1_low.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl1_low.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -846,51 +731,42 @@ class ResultViewController: UIViewController {
         txt_dl1_low.layer.cornerRadius = 10
         txt_dl1_low.clipsToBounds = true
         txt_dl1_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_dl1_normal(){
         total_deadlift.append((txt_dl1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl1_normal.layer.cornerRadius = 10
         txt_dl1_normal.clipsToBounds = true
         txt_dl1_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl1_normal(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl1_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl1_normal.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl1_normal.backgroundColor = UIColor.white
         txt_dl1_normal.layer.cornerRadius = 10
         txt_dl1_normal.clipsToBounds = true
         txt_dl1_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_dl1_high(){
         total_deadlift.append((txt_dl1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl1_high.layer.cornerRadius = 10
         txt_dl1_high.clipsToBounds = true
         txt_dl1_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl1_high(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl1_high.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl1_high.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -898,62 +774,50 @@ class ResultViewController: UIViewController {
         txt_dl1_high.layer.cornerRadius = 10
         txt_dl1_high.clipsToBounds = true
         txt_dl1_high.textColor = UIColor.black
-
     }
-    
     
     @objc func tap_dl2_low(){
         total_deadlift.append((txt_dl2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl2_low.layer.cornerRadius = 10
         txt_dl2_low.clipsToBounds = true
         txt_dl2_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl2_low(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl2_low.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl2_low.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl2_low.backgroundColor = UIColor.white
         txt_dl2_low.layer.cornerRadius = 10
         txt_dl2_low.clipsToBounds = true
         txt_dl2_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_dl2_normal(){
         total_deadlift.append((txt_dl2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl2_normal.layer.cornerRadius = 10
         txt_dl2_normal.clipsToBounds = true
         txt_dl2_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl2_normal(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl2_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl2_normal.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl2_normal.backgroundColor = UIColor.white
         txt_dl2_normal.layer.cornerRadius = 10
         txt_dl2_normal.clipsToBounds = true
         txt_dl2_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_dl2_high(){
@@ -969,7 +833,7 @@ class ResultViewController: UIViewController {
     }
     
     @objc func untap_dl2_high(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl2_high.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl2_high.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -977,39 +841,29 @@ class ResultViewController: UIViewController {
         txt_dl2_high.layer.cornerRadius = 10
         txt_dl2_high.clipsToBounds = true
         txt_dl2_high.textColor = UIColor.black
-
     }
-    
-    
-    
 
     @objc func tap_dl3_low(){
         total_deadlift.append((txt_dl3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl3_low.layer.cornerRadius = 10
         txt_dl3_low.clipsToBounds = true
         txt_dl3_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl3_low(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl3_low.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl3_low.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl3_low.backgroundColor = UIColor.white
         txt_dl3_low.layer.cornerRadius = 10
         txt_dl3_low.clipsToBounds = true
         txt_dl3_low.textColor = UIColor.black
-
     }
-    
-    
     
     @objc func tap_dl3_normal(){
         total_deadlift.append((txt_dl3_normal.text! as NSString).doubleValue)
@@ -1020,37 +874,32 @@ class ResultViewController: UIViewController {
         txt_dl3_normal.layer.cornerRadius = 10
         txt_dl3_normal.clipsToBounds = true
         txt_dl3_normal.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl3_normal(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl3_normal.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl3_normal.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl3_normal.backgroundColor = UIColor.white
         txt_dl3_normal.layer.cornerRadius = 10
         txt_dl3_normal.clipsToBounds = true
         txt_dl3_normal.textColor = UIColor.black
-
     }
     
     @objc func tap_dl3_high(){
         total_deadlift.append((txt_dl3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl3_high.layer.cornerRadius = 10
         txt_dl3_high.clipsToBounds = true
         txt_dl3_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl3_high(){
-        while let certainIndex = total_deadlift.index(of: (txt_dl3_high.text! as NSString).doubleValue){
+        while let certainIndex = total_deadlift.firstIndex(of: (txt_dl3_high.text! as NSString).doubleValue){
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
@@ -1058,7 +907,6 @@ class ResultViewController: UIViewController {
         txt_dl3_high.layer.cornerRadius = 10
         txt_dl3_high.clipsToBounds = true
         txt_dl3_high.textColor = UIColor.black
-
     }
     
     // calculators
