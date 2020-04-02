@@ -62,6 +62,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var txt_Gender: UILabel!
     @IBOutlet weak var txt_Bodyweight: UILabel!
     
+    
     var wilks = String()
     var total = String()
     var gender = String()
@@ -348,13 +349,13 @@ class ResultViewController: UIViewController {
     }
     
     func wilksTotal() -> Double {
-        return wilksStuff  + showTotal()
+        return wilksStuff  * (showTotal() / 2.2)
     }
         
     @objc func tap_sq1_low(){
         total_squat.append((txt_sq1_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
         txt_sq1_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_low.layer.cornerRadius = 10
         txt_sq1_low.clipsToBounds = true
@@ -367,7 +368,7 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
         txt_sq1_low.backgroundColor = UIColor.white
         txt_sq1_low.layer.cornerRadius = 10
         txt_sq1_low.clipsToBounds = true
@@ -380,7 +381,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq1_normal(){
         total_squat.append((txt_sq1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_normal.layer.cornerRadius = 10
@@ -394,7 +395,7 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq1_normal.backgroundColor = UIColor.white
         txt_sq1_normal.layer.cornerRadius = 10
@@ -406,7 +407,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq1_high(){
         total_squat.append((txt_sq1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq1_high.layer.cornerRadius = 10
@@ -431,7 +432,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq2_low(){
         total_squat.append((txt_sq2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_low.layer.cornerRadius = 10
@@ -445,7 +446,7 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq2_low.backgroundColor = UIColor.white
         txt_sq2_low.layer.cornerRadius = 10
@@ -459,7 +460,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq2_normal(){
         total_squat.append((txt_sq2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_normal.layer.cornerRadius = 10
@@ -473,7 +474,7 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq2_normal.backgroundColor = UIColor.white
         txt_sq2_normal.layer.cornerRadius = 10
@@ -485,7 +486,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq2_high(){
         total_squat.append((txt_sq2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq2_high.layer.cornerRadius = 10
@@ -512,7 +513,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq3_low(){
         total_squat.append((txt_sq3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_low.layer.cornerRadius = 10
@@ -526,7 +527,7 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq3_low.backgroundColor = UIColor.white
         txt_sq3_low.layer.cornerRadius = 10
@@ -540,7 +541,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq3_normal(){
         total_squat.append((txt_sq3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_normal.layer.cornerRadius = 10
@@ -554,7 +555,7 @@ class ResultViewController: UIViewController {
             total_squat.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq3_normal.backgroundColor = UIColor.white
         txt_sq3_normal.layer.cornerRadius = 10
@@ -566,7 +567,7 @@ class ResultViewController: UIViewController {
     @objc func tap_sq3_high(){
         total_squat.append((txt_sq3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_sq3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_sq3_high.layer.cornerRadius = 10
@@ -591,7 +592,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn1_low(){
         total_bench.append((txt_bn1_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
         txt_bn1_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn1_low.layer.cornerRadius = 10
         txt_bn1_low.clipsToBounds = true
@@ -604,7 +605,7 @@ class ResultViewController: UIViewController {
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
         txt_bn1_low.backgroundColor = UIColor.white
         txt_bn1_low.layer.cornerRadius = 10
         txt_bn1_low.clipsToBounds = true
@@ -617,7 +618,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn1_normal(){
         total_bench.append((txt_bn1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn1_normal.layer.cornerRadius = 10
@@ -631,7 +632,7 @@ class ResultViewController: UIViewController {
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn1_normal.backgroundColor = UIColor.white
         txt_bn1_normal.layer.cornerRadius = 10
@@ -643,7 +644,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn1_high(){
         total_bench.append((txt_bn1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn1_high.layer.cornerRadius = 10
@@ -668,7 +669,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn2_low(){
         total_bench.append((txt_bn2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn2_low.layer.cornerRadius = 10
@@ -682,7 +683,7 @@ class ResultViewController: UIViewController {
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn2_low.backgroundColor = UIColor.white
         txt_bn2_low.layer.cornerRadius = 10
@@ -696,7 +697,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn2_normal(){
         total_bench.append((txt_bn2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn2_normal.layer.cornerRadius = 10
@@ -710,7 +711,7 @@ class ResultViewController: UIViewController {
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn2_normal.backgroundColor = UIColor.white
         txt_bn2_normal.layer.cornerRadius = 10
@@ -722,7 +723,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn2_high(){
         total_bench.append((txt_bn2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn2_high.layer.cornerRadius = 10
@@ -749,7 +750,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn3_low(){
         total_bench.append((txt_bn3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn3_low.layer.cornerRadius = 10
@@ -763,7 +764,7 @@ class ResultViewController: UIViewController {
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn3_low.backgroundColor = UIColor.white
         txt_bn3_low.layer.cornerRadius = 10
@@ -777,7 +778,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn3_normal(){
         total_bench.append((txt_bn3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn3_normal.layer.cornerRadius = 10
@@ -791,7 +792,7 @@ class ResultViewController: UIViewController {
             total_bench.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn3_normal.backgroundColor = UIColor.white
         txt_bn3_normal.layer.cornerRadius = 10
@@ -803,7 +804,7 @@ class ResultViewController: UIViewController {
     @objc func tap_bn3_high(){
         total_bench.append((txt_bn3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_bn3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_bn3_high.layer.cornerRadius = 10
@@ -827,7 +828,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl1_low(){
         total_deadlift.append((txt_dl1_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
         txt_dl1_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl1_low.layer.cornerRadius = 10
         txt_dl1_low.clipsToBounds = true
@@ -840,7 +841,7 @@ class ResultViewController: UIViewController {
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
         txt_dl1_low.backgroundColor = UIColor.white
         txt_dl1_low.layer.cornerRadius = 10
         txt_dl1_low.clipsToBounds = true
@@ -853,7 +854,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl1_normal(){
         total_deadlift.append((txt_dl1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl1_normal.layer.cornerRadius = 10
@@ -867,7 +868,7 @@ class ResultViewController: UIViewController {
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl1_normal.backgroundColor = UIColor.white
         txt_dl1_normal.layer.cornerRadius = 10
@@ -879,7 +880,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl1_high(){
         total_deadlift.append((txt_dl1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl1_high.layer.cornerRadius = 10
@@ -904,7 +905,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl2_low(){
         total_deadlift.append((txt_dl2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl2_low.layer.cornerRadius = 10
@@ -918,7 +919,7 @@ class ResultViewController: UIViewController {
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl2_low.backgroundColor = UIColor.white
         txt_dl2_low.layer.cornerRadius = 10
@@ -932,7 +933,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl2_normal(){
         total_deadlift.append((txt_dl2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl2_normal.layer.cornerRadius = 10
@@ -946,7 +947,7 @@ class ResultViewController: UIViewController {
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl2_normal.backgroundColor = UIColor.white
         txt_dl2_normal.layer.cornerRadius = 10
@@ -958,7 +959,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl2_high(){
         total_deadlift.append((txt_dl2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl2_high.layer.cornerRadius = 10
@@ -985,7 +986,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl3_low(){
         total_deadlift.append((txt_dl3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl3_low.layer.cornerRadius = 10
@@ -999,7 +1000,7 @@ class ResultViewController: UIViewController {
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl3_low.backgroundColor = UIColor.white
         txt_dl3_low.layer.cornerRadius = 10
@@ -1013,7 +1014,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl3_normal(){
         total_deadlift.append((txt_dl3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl3_normal.layer.cornerRadius = 10
@@ -1027,7 +1028,7 @@ class ResultViewController: UIViewController {
             total_deadlift.remove(at: certainIndex)
         }
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl3_normal.backgroundColor = UIColor.white
         txt_dl3_normal.layer.cornerRadius = 10
@@ -1039,7 +1040,7 @@ class ResultViewController: UIViewController {
     @objc func tap_dl3_high(){
         total_deadlift.append((txt_dl3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
-        txt_Wilks.text = String(wilksTotal())
+        txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
         txt_dl3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
         txt_dl3_high.layer.cornerRadius = 10

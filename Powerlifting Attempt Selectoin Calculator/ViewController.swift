@@ -175,10 +175,10 @@ class ViewController: UIViewController {
             let rvc = segue.destination as! ResultViewController
             
             if lblMale.isSelected {
-                rvc.wilksStuff = bodyWeight * 1
+                rvc.wilksStuff = wilks(bodyweight: bodyWeight)
                 rvc.gender = "Male"
             } else if lblFemale.isSelected{
-                rvc.wilksStuff = bodyWeight * 1/2
+                rvc.wilksStuff = wilks(bodyweight: bodyWeight)
                 rvc.gender = "Female"
             }
             
@@ -231,6 +231,40 @@ class ViewController: UIViewController {
             
             
         }
+    }
+    
+    func wilks(bodyweight: Double) -> Double
+    {
+        let  bw = (bodyweight / 2.2);
+
+        var  result = 0.0;
+
+        if (lblMale.isSelected)
+        {
+            result = 500 /
+                (
+                    ((-216.0475144)) +
+                    ((16.2606339)*(bw)) -
+                    ((0.002388645)*(pow(bw,2))) -
+                    ((0.00113732)*(pow(bw,3))) +
+                    ((0.00000701863)*(pow(bw,4))) -
+                    ((0.00000001291)*(pow(bw,5)))
+                );
+
+        }
+        else if (lblFemale.isSelected)
+        {
+            result = 500 /
+                (
+                    ((594.31747775582)) -
+                    ((27.23842536447)*(bw)) +
+                    ((0.82112226871)*(pow(bw,2))) -
+                    ((0.00930733913)*(pow(bw,3))) +
+                    ((0.00004731582)*(pow(bw,4))) -
+                    ((0.00000009054)*(pow(bw,5)))
+                );
+        }
+        return result;
     }
     
     
