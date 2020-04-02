@@ -322,7 +322,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq1_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq1_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq1_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq1_low.layer.cornerRadius = 10
         txt_sq1_low.clipsToBounds = true
         txt_sq1_low.textColor = UIColor.white
@@ -345,7 +345,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq1_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq1_normal.layer.cornerRadius = 10
         txt_sq1_normal.clipsToBounds = true
         txt_sq1_normal.textColor = UIColor.white
@@ -367,7 +367,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq1_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq1_high.layer.cornerRadius = 10
         txt_sq1_high.clipsToBounds = true
         txt_sq1_high.textColor = UIColor.white
@@ -388,7 +388,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq2_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq2_low.layer.cornerRadius = 10
         txt_sq2_low.clipsToBounds = true
         txt_sq2_low.textColor = UIColor.white
@@ -411,7 +411,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq2_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq2_normal.layer.cornerRadius = 10
         txt_sq2_normal.clipsToBounds = true
         txt_sq2_normal.textColor = UIColor.white
@@ -433,7 +433,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq2_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq2_high.layer.cornerRadius = 10
         txt_sq2_high.clipsToBounds = true
         txt_sq2_high.textColor = UIColor.white
@@ -454,7 +454,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq3_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq3_low.layer.cornerRadius = 10
         txt_sq3_low.clipsToBounds = true
         txt_sq3_low.textColor = UIColor.white
@@ -476,7 +476,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq3_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq3_normal.layer.cornerRadius = 10
         txt_sq3_normal.clipsToBounds = true
         txt_sq3_normal.textColor = UIColor.white
@@ -498,7 +498,7 @@ class ResultViewController: UIViewController {
         total_squat.append((txt_sq3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_sq3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_sq3_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_sq3_high.layer.cornerRadius = 10
         txt_sq3_high.clipsToBounds = true
         txt_sq3_high.textColor = UIColor.white
@@ -519,7 +519,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn1_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn1_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn1_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn1_low.layer.cornerRadius = 10
         txt_bn1_low.clipsToBounds = true
         txt_bn1_low.textColor = UIColor.white
@@ -541,7 +541,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn1_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn1_normal.layer.cornerRadius = 10
         txt_bn1_normal.clipsToBounds = true
         txt_bn1_normal.textColor = UIColor.white
@@ -563,7 +563,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn1_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn1_high.layer.cornerRadius = 10
         txt_bn1_high.clipsToBounds = true
         txt_bn1_high.textColor = UIColor.white
@@ -585,7 +585,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn2_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn2_low.layer.cornerRadius = 10
         txt_bn2_low.clipsToBounds = true
         txt_bn2_low.textColor = UIColor.white
@@ -607,7 +607,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn2_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn2_normal.layer.cornerRadius = 10
         txt_bn2_normal.clipsToBounds = true
         txt_bn2_normal.textColor = UIColor.white
@@ -629,7 +629,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn2_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn2_high.layer.cornerRadius = 10
         txt_bn2_high.clipsToBounds = true
         txt_bn2_high.textColor = UIColor.white
@@ -650,7 +650,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn3_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn3_low.layer.cornerRadius = 10
         txt_bn3_low.clipsToBounds = true
         txt_bn3_low.textColor = UIColor.white
@@ -672,7 +672,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn3_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn3_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn3_normal.layer.cornerRadius = 10
         txt_bn3_normal.clipsToBounds = true
         txt_bn3_normal.textColor = UIColor.white
@@ -694,7 +694,7 @@ class ResultViewController: UIViewController {
         total_bench.append((txt_bn3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_bn3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_bn3_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_bn3_high.layer.cornerRadius = 10
         txt_bn3_high.clipsToBounds = true
         txt_bn3_high.textColor = UIColor.white
@@ -715,7 +715,7 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl1_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_dl1_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl1_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl1_low.layer.cornerRadius = 10
         txt_dl1_low.clipsToBounds = true
         txt_dl1_low.textColor = UIColor.white
@@ -737,7 +737,7 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl1_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_dl1_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl1_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl1_normal.layer.cornerRadius = 10
         txt_dl1_normal.clipsToBounds = true
         txt_dl1_normal.textColor = UIColor.white
@@ -759,7 +759,7 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl1_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_dl1_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl1_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl1_high.layer.cornerRadius = 10
         txt_dl1_high.clipsToBounds = true
         txt_dl1_high.textColor = UIColor.white
@@ -780,7 +780,7 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl2_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_dl2_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl2_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl2_low.layer.cornerRadius = 10
         txt_dl2_low.clipsToBounds = true
         txt_dl2_low.textColor = UIColor.white
@@ -802,7 +802,7 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl2_normal.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_dl2_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl2_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl2_normal.layer.cornerRadius = 10
         txt_dl2_normal.clipsToBounds = true
         txt_dl2_normal.textColor = UIColor.white
@@ -825,7 +825,7 @@ class ResultViewController: UIViewController {
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
-        txt_dl2_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl2_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl2_high.layer.cornerRadius = 10
         txt_dl2_high.clipsToBounds = true
         txt_dl2_high.textColor = UIColor.white
@@ -847,7 +847,7 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl3_low.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_dl3_low.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl3_low.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl3_low.layer.cornerRadius = 10
         txt_dl3_low.clipsToBounds = true
         txt_dl3_low.textColor = UIColor.white
@@ -870,7 +870,7 @@ class ResultViewController: UIViewController {
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
 
-        txt_dl3_normal.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl3_normal.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl3_normal.layer.cornerRadius = 10
         txt_dl3_normal.clipsToBounds = true
         txt_dl3_normal.textColor = UIColor.white
@@ -892,7 +892,7 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl3_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-        txt_dl3_high.backgroundColor = hexStringToUIColor(hex: "#CE4043")
+        txt_dl3_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl3_high.layer.cornerRadius = 10
         txt_dl3_high.clipsToBounds = true
         txt_dl3_high.textColor = UIColor.white
