@@ -25,7 +25,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var txt_sq3_normal: UILabel!
     @IBOutlet weak var txt_sq3_high: UILabel!
     
-    // bench
+    // bench press
     @IBOutlet weak var txt_bn1RM: UILabel!
     
     @IBOutlet weak var txt_bn1_low: UILabel!
@@ -69,7 +69,6 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var bLow: UILabel!
     @IBOutlet weak var bNormal: UILabel!
     @IBOutlet weak var bHigh: UILabel!
-    
     
     @IBOutlet weak var dLow: UILabel!
     @IBOutlet weak var dNormal: UILabel!
@@ -350,7 +349,6 @@ class ResultViewController: UIViewController {
         txt_sq1_low.layer.cornerRadius = 10
         txt_sq1_low.clipsToBounds = true
         txt_sq1_low.textColor = UIColor.white
-        
     }
     
     @objc func untap_sq1_low(){
@@ -429,7 +427,6 @@ class ResultViewController: UIViewController {
         txt_sq2_low.clipsToBounds = true
         txt_sq2_low.textColor = UIColor.black
     }
-    
     
     @objc func tap_sq2_normal(){
         total_squat.append((txt_sq2_normal.text! as NSString).doubleValue)
@@ -848,12 +845,10 @@ class ResultViewController: UIViewController {
         total_deadlift.append((txt_dl2_high.text! as NSString).doubleValue)
         txt_Total.text = String(showTotal())
         txt_Wilks.text = String(format: "%.2f", wilksTotal())
-
         txt_dl2_high.backgroundColor = hexStringToUIColor(hex: "#C82C33")
         txt_dl2_high.layer.cornerRadius = 10
         txt_dl2_high.clipsToBounds = true
         txt_dl2_high.textColor = UIColor.white
-        
     }
     
     @objc func untap_dl2_high(){
@@ -943,7 +938,6 @@ class ResultViewController: UIViewController {
         }
         return max
     }
-    
     
     func highestBenchAttempt() -> Double{
         var max = 0.0

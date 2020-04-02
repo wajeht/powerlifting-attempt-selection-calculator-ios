@@ -9,7 +9,6 @@
 import UIKit
 import Foundation
 
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var lblMale: UIButton!
@@ -100,7 +99,6 @@ class ViewController: UIViewController {
                               
             self.present(alert, animated: true, completion: nil)
           }
-
     }
     
     @IBAction func btnMale(_ sender: Any) {
@@ -206,8 +204,6 @@ class ViewController: UIViewController {
             rvc.sq3_low = String((sq_thirdAttempt - (Int(Double(sq_thirdAttempt) * Double(0.01)))))
             rvc.sq3_normal = String(sq_thirdAttempt)
             rvc.sq3_high = String((sq_thirdAttempt + (Int(Double(sq_thirdAttempt) * Double(0.02)))))
-            
-            
 
             rvc.bn1_low = String((bn_firstAttempt - (Int(Double(bn_firstAttempt) * Double(0.01)))))
             rvc.bn1_normal = String(bn_firstAttempt)
@@ -220,8 +216,6 @@ class ViewController: UIViewController {
             rvc.bn3_low = String((bn_thirdAttempt - (Int(Double(bn_thirdAttempt) * Double(0.01)))))
             rvc.bn3_normal = String(bn_thirdAttempt)
             rvc.bn3_high = String((bn_thirdAttempt + (Int(Double(bn_thirdAttempt) * Double(0.02)))))
-    
-            
     
             rvc.dl1_low = String((dl_firstAttempt - (Int(Double(dl_firstAttempt) * Double(0.01)))))
             rvc.dl1_normal = String(dl_firstAttempt)
@@ -269,8 +263,6 @@ class ViewController: UIViewController {
         return result;
     }
     
-    
-    
     // caltulations
     func firstAttempt(oneRepMax: Double) -> Double {
         return (oneRepMax * 0.91)
@@ -294,7 +286,6 @@ class ViewController: UIViewController {
 
         return Double(front + weight)
     }
-    
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
