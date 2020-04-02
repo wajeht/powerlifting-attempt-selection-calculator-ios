@@ -176,9 +176,14 @@ class ViewController: UIViewController {
             
             if lblMale.isSelected {
                 rvc.wilksStuff = bodyWeight * 1
+                rvc.gender = "Male"
             } else if lblFemale.isSelected{
                 rvc.wilksStuff = bodyWeight * 1/2
+                rvc.gender = "Female"
             }
+            
+            rvc.bodyWeight = String(txt_bodyWeight.text ?? "")
+            
             
             rvc.sqOneRepMax = "SQUAT e1RM: " + String(sqMax)
             rvc.bnOneRepMax = "BENCH e1RM: " + String(bnMax)
@@ -223,6 +228,7 @@ class ViewController: UIViewController {
             rvc.dl3_low = String((dl_thirdAttempt - (Int(Double(dl_thirdAttempt) * Double(0.01)))))
             rvc.dl3_normal = String(dl_thirdAttempt)
             rvc.dl3_high = String((dl_thirdAttempt + (Int(Double(dl_thirdAttempt) * Double(0.02)))))
+            
             
         }
     }

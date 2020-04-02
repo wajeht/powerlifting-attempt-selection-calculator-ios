@@ -59,9 +59,13 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var txt_totalAndWilks: UILabel!
     @IBOutlet weak var txt_Wilks: UILabel!
     @IBOutlet weak var txt_Total: UILabel!
+    @IBOutlet weak var txt_Gender: UILabel!
+    @IBOutlet weak var txt_Bodyweight: UILabel!
     
     var wilks = String()
     var total = String()
+    var gender = String()
+    var bodyWeight = String()
     
     var sqOneRepMax = String()
     var bnOneRepMax = String()
@@ -172,6 +176,9 @@ class ResultViewController: UIViewController {
         txt_dl3_low.text = dl3_low
         txt_dl3_normal.text = dl3_normal
         txt_dl3_high.text = dl3_high
+        
+        txt_Gender.text = gender;
+        txt_Bodyweight.text = bodyWeight;
         
         let stap_txt_sq1_low = UITapGestureRecognizer(target: self,  action: #selector(tap_sq1_low))
         let ltap_txt_sq1_low = UILongPressGestureRecognizer(target: self,  action: #selector(untap_sq1_low))
