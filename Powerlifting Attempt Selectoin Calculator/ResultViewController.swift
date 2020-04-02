@@ -62,6 +62,18 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var txt_Gender: UILabel!
     @IBOutlet weak var txt_Bodyweight: UILabel!
     
+    @IBOutlet weak var sLow: UILabel!
+    @IBOutlet weak var sNormal: UILabel!
+    @IBOutlet weak var sHigh: UILabel!
+    
+    @IBOutlet weak var bLow: UILabel!
+    @IBOutlet weak var bNormal: UILabel!
+    @IBOutlet weak var bHigh: UILabel!
+    
+    
+    @IBOutlet weak var dLow: UILabel!
+    @IBOutlet weak var dNormal: UILabel!
+    @IBOutlet weak var dHigh: UILabel!
     
     var wilks = String()
     var total = String()
@@ -116,8 +128,20 @@ class ResultViewController: UIViewController {
     var total_deadlift = [Double]()
         
     var wilksStuff = 0.0
+    
+    var low = "Low      "
+    var high = "High    "
 
     override func viewDidLoad() {
+        
+        sLow.text = low;
+        bLow.text = low;
+        dLow.text = low;
+        
+        sHigh.text = high;
+        bHigh.text = high;
+        dHigh.text = high;
+        
         // one rep maxes and wilks
         txt_Wilks.text = wilks
         txt_Total.text = total
