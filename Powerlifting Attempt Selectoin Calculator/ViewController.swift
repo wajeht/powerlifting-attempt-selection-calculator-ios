@@ -178,7 +178,6 @@ class ViewController: UIViewController {
         
         bodyWeight = Double(txt_bodyWeight.text ?? "") ?? 0.0
         
-        
         if segue.identifier == "segue"{
             let rvc = segue.destination as! ResultViewController
             
