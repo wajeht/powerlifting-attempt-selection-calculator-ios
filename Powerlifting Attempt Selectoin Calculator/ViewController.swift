@@ -282,10 +282,16 @@ class ViewController: UIViewController {
         return (oneRepMax)
     }
     
+
     func oneRepMax(rep: Int, weight: Int, rpe: Int) -> Double {
         
+        let middle = ((10 - (rpe + 1)) + rep)
 
-        return Double(weight)
+        let the = weight * middle
+        
+        let front = Int(Double(the) * 0.03)
+
+        return Double(front + weight)
     }
     
     
