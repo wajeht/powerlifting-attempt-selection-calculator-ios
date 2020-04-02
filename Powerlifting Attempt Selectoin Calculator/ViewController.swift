@@ -124,7 +124,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnCalculate(_ sender: Any) {
         
-        if txt_bodyWeight.text == "" ||
+        if (txt_bodyWeight.text == "" ||
             txt_bodyWeight.text == "" ||
             txt_sqRep.text == "" ||
             txt_sqWeight.text == "" ||
@@ -134,24 +134,21 @@ class ViewController: UIViewController {
             txt_bnRpe.text == "" ||
             txt_dlRep.text == "" ||
             txt_dlWeight.text == "" ||
-            txt_dlRpe.text == ""
+            txt_dlRpe.text == "")
             {
-            
-            let alert = UIAlertController(title: "", message: "Please provide all input fields!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Default action"), style: .default, handler: { _ in }))
-            self.present(alert, animated: true, completion: nil)
+                let alert = UIAlertController(title: "", message: "Please provide all input fields!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Default action"), style: .default, handler: { _ in }))
+                self.present(alert, animated: true, completion: nil)
         }
-
-        
         else if (!txt_sqRpe.text!.isInt ||
                 !txt_bnRpe.text!.isInt ||
-                !txt_dlRpe.text!.isInt){
-        let alert = UIAlertController(title: "", message: "Lets be objective. If an RPE is 7.5, you should put 8 instead for accurate rating!", preferredStyle: .alert)
+                !txt_dlRpe.text!.isInt)
+        {
+            let alert = UIAlertController(title: "", message: "Let's be objective for accurate rating. If an RPE is 7.5, you should put 8 instead!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Default action"), style: .default, handler: { _ in }))
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
