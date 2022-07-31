@@ -3,6 +3,6 @@
 # Powerlifting Meet Attempt Selection Calculator
 This app is designed to take your heaviest lift within 1-2 weeks before the competition, and calculate attempt selection based on that. Nothing more, nothing less!
 
-[Download on AppStore](https://play.google.com/store/apps/details?id=com.jawstrength.powerliftingattemptselectioncalculator)<br>
+[Download on AppStore](https://apps.apple.com/us/app/powerlifting-attempt-calculatr/id1540891589)<br>
 
 
